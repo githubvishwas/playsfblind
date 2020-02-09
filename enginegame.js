@@ -136,10 +136,10 @@ function engineGame(options) {
     }
 
     function prepareMove() {
-        stopClock();
+        //stopClock();
         $('#pgn').text(game.pgn());
         board.position(game.fen());
-        updateClock();
+        //updateClock();
         var turn = game.turn() == 'w' ? 'white' : 'black';
         if(!game.game_over()) {
             if(turn != playerColor) {
@@ -155,9 +155,9 @@ function engineGame(options) {
                 }
                 isEngineRunning = true;
             }
-            if(game.history().length >= 2 && !time.depth && !time.nodes) {
-                startClock();
-            }
+            //if(game.history().length >= 2 && !time.depth && !time.nodes) {
+            //    startClock();
+            //}
         }
     }
     
